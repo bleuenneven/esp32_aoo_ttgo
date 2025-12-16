@@ -38,7 +38,7 @@ The following ESP-ADF components were modified or extended:
 #### `audio_hal`
 Contains the low-level audio codec drivers.  
 
-The WM8978 driver was added here. It is based on two initial general files [`WM8978.c`](components/audio_hal/driver/WM8978.c) and [`WM8978.h`](components/audio_hal/driver/WM8978.h) written for this codec. These had to be completed in this project to implement the different `audio_hal` functions used in ESP-ADF, with two additional files, [`wm8978_codec.c`](components/audio_hal/driver/wm8978_codec.c) and [`wm8978_codec.h`](components/audio_hal/driver/wm8978_codec.h), written based on the example codes for custom boards and codecs found in [`esp-adf/examples/get-started/play_mp3_control/components/my_board`](https://github.com/espressif/esp-adf/tree/master/examples/get-started/play_mp3_control/components/my_board).
+The WM8978 driver was added here. It is based on two initial general files [`WM8978.c`](components/audio_hal/driver/wm8978/WM8978.c) and [`WM8978.h`](components/audio_hal/driver/wm8978/WM8978.h) written for this codec. These had to be completed in this project to implement the different `audio_hal` functions used in ESP-ADF, with two additional files, [`wm8978_codec.c`](components/audio_hal/driver/wm8978/wm8978_codec.c) and [`wm8978_codec.h`](components/audio_hal/driver/wm8978/wm8978_codec.h), written based on the example codes for custom boards and codecs found in [`esp-adf/examples/get-started/play_mp3_control/components/my_board`](https://github.com/espressif/esp-adf/tree/master/examples/get-started/play_mp3_control/components/my_board).
 
 This is the component actually used by AOO for the ESP-ADF audio pipeline.
 
@@ -119,4 +119,3 @@ Do not forget to configure in `AOO settings` after executing `$ idf.py menuconfi
 
 - **Board:** Select `LilyGO TTGO with WM8978 codec` in `Audio HAL` 
 - **Audio codec:** The codec WM8978 associated will be used automatically when the LilyGO TTGO board is selected.
-
