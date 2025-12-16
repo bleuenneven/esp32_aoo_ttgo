@@ -38,7 +38,7 @@ The following ESP-ADF components were modified or extended:
 #### `audio_hal`
 Contains the low-level audio codec drivers.  
 
-The WM8978 driver was added here. It is based on two initial general files [`WM8978.c`](esp-adf/components/audio_hal/driver/WM8978.c) and [`WM8978.h`](esp-adf/components/audio_hal/driver/WM8978.h) written for this codec. These had to be completed in this project to implement the different `audio_hal` functions used in ESP-ADF, with two additional files, [`wm8978_codec.c`](esp-adf/components/audio_hal/driver/wm8978_codec.c) and [`wm8978_codec.h`](esp-adf/components/audio_hal/driver/wm8978_codec.h), written based on the example codes for custom boards and codecs found in [`esp-adf/examples/get-started/play_mp3_control/components/my_board`](https://github.com/espressif/esp-adf/tree/master/examples/get-started/play_mp3_control/components/my_board).
+The WM8978 driver was added here. It is based on two initial general files [`WM8978.c`](components/audio_hal/driver/WM8978.c) and [`WM8978.h`](components/audio_hal/driver/WM8978.h) written for this codec. These had to be completed in this project to implement the different `audio_hal` functions used in ESP-ADF, with two additional files, [`wm8978_codec.c`](components/audio_hal/driver/wm8978_codec.c) and [`wm8978_codec.h`](components/audio_hal/driver/wm8978_codec.h), written based on the example codes for custom boards and codecs found in [`esp-adf/examples/get-started/play_mp3_control/components/my_board`](https://github.com/espressif/esp-adf/tree/master/examples/get-started/play_mp3_control/components/my_board).
 
 This is the component actually used by AOO for the ESP-ADF audio pipeline.
 
@@ -51,7 +51,7 @@ A new board definition for the **LilyGO TTGO** was added, based on information a
 Although initially explored, this component is **not used by the ESP-ADF audio pipeline** in this project using **AOO**.  
 The `aoo_receive` example uses `audio_hal` to initialize and control the codec.
 
-Even though it is not used, a WM8978 codec implementation was started in [`esp_codec_dev`](https://github.com/espressif/esp_codec_dev), based on the instructions for customization for new codec devices found in its [README](https://github.com/espressif/esp_codec_dev/blob/master/README.md), and sample code [`my_codec.c`](https://github.com/espressif/esp_codec_dev/blob/master/test_apps/codec_dev_test/main/my_codec.c). This implementation uses functions for codec initialization and control that are distinct from the `audio_hal` functions.
+Even though it is not used, a WM8978 codec implementation was started in [`esp_codec_dev`](https://github.com/espressif/esp-adf/tree/master/components/esp_codec_dev), based on the instructions for customization for new codec devices found in its [README](https://github.com/espressif/esp-adf/tree/master/components/esp_codec_dev/README.md), and sample code [`my_codec.c`](https://github.com/espressif/esp-adf/tree/master/components/esp_codec_dev/test_apps/codec_dev_test/main/my_codec.c). This implementation uses functions for codec initialization and control that are distinct from the `audio_hal` functions.
 
 ---
 
